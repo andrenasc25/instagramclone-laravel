@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersPostsTagesTable extends Migration
+class CreateUsersPostsTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUsersPostsTagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_posts_tages', function (Blueprint $table) {
+        Schema::create('users_posts_tags', function (Blueprint $table) {
             $table->id();
 
             //Foreign keys
