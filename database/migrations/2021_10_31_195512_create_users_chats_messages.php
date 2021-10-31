@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersPostsTable extends Migration
+class CreateUsersChatsMessages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateUsersPostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_posts', function (Blueprint $table) {
+        Schema::create('users_chats_messages', function (Blueprint $table) {
             $table->id();
-
-            //Foreign keys
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-
-            //Normal columns
-            $table->longText('text');
+            $table->longText('message');
             $table->timestamp('created_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
@@ -33,6 +27,6 @@ class CreateUsersPostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_posts');
+        Schema::dropIfExists('users_chats_messages');
     }
 }

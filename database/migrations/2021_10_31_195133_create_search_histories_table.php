@@ -15,7 +15,7 @@ class CreateSearchHistoriesTable extends Migration
     {
         Schema::create('search_histories', function (Blueprint $table) {
             $table->id();
-            $table->longText('search_history_keyword');
+            $table->longText('keyword');
 
             //Foreign keys
             $table->unsignedBigInteger('user_id');
