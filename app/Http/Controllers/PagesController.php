@@ -31,4 +31,9 @@ class PagesController extends Controller
     {
         return view('pages.user.profile');
     }
+
+    public function chat()
+    {
+        return view('pages.user.chat');
+    }
 }
