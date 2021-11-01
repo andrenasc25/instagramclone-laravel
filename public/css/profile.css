@@ -1,0 +1,389 @@
+.profile-ctn{
+    height: 1300px;
+    background-color: rgb(250,250,250);
+    display: flex;
+    justify-content: center;
+}
+.profile{
+    width: 937px;
+    height: 100%;
+}
+.profile-header{
+    height: 246px;
+    display: flex;
+    position: relative;
+}
+.profile-picture-ctn{
+    width: 294px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.profile-picture-ctn > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+.profile-info-ctn{
+    width: 640px;
+    height: 100%;
+    padding-top: 35px;
+}
+.profile-info-wrapper{
+    height: 160px;
+    width: 365px;
+}
+.profile-info-edit-wrapper{
+    height: 30px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.profile-info-edit-wrapper > span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    line-height: 28px;
+}
+.profile-info-edit-wrapper > button{
+    height: 30px;
+    border: 1px solid rgb(219, 219, 219);
+    background-color: transparent;
+    border-radius: 5px;
+    color: rgb(38, 38, 79);
+    font-weight: 600;
+    width: 93px;
+    cursor: pointer;
+    position: absolute;
+    right: 37px;
+}
+.profile-info-edit-wrapper > img{
+    cursor: pointer;
+}
+.profile-info-acquaitances{
+    height: 20px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile-info-acquaitances-publications > span{
+    font-family: 'Roboto', sans-serif;
+}
+.profile-info-acquaitances-publications > span:nth-of-type(1){
+    font-weight: 600;
+}
+.profile-info-acquaitances-followers > span{
+    font-family: 'Roboto', sans-serif;
+}
+.profile-info-acquaitances-followers > span:nth-of-type(1){
+    font-weight: 600;
+}
+.profile-info-acquaitances-following > span{
+    font-family: 'Roboto', sans-serif;
+}
+.profile-info-acquaitances-following > span:nth-of-type(1){
+    font-weight: 600;
+}
+.profile-info-user-full-name{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 25px;
+    display: block;
+}
+.profile-info-user-bio{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+.profile-info-website-link{
+    text-decoration: none;
+    color: rgb(0, 57, 139);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+#uploadPost{
+    position:absolute;
+    border:1px solid #000;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    opacity:0;
+}
+.profile-upload-ctn{
+    width: 275px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-upload-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.profile-upload-wrapper > span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+.profile-body{
+    height: 667px;
+}
+.profile-body-tabs-ctn{
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(219, 219, 219);
+}
+.profile-body-tabs-wrapper{
+    width: 510px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-body-tab{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.profile-body-tab:nth-of-type(1) > span{
+    color:#000;
+}
+.profile-body-tab > svg{
+    margin-right: 7px;
+}
+.profile-body-tab > span{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: rgb(142, 142, 142);
+}
+.profile-body-posts-ctn{
+    display: grid;
+    grid-template-columns: repeat(3, 293px);
+    grid-template-rows: repeat(2, 293px);
+    justify-content: space-between;
+    row-gap: 28px;
+}
+.profile-body-post{
+    cursor: pointer;
+    position: relative;
+}
+.profile-body-post-info{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0,0,0,.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.profile-body-post > img{
+    width: 100%;
+    height: 100%;
+}
+.profile-body-post-info > div{
+    width: 45px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+.profile-body-post-info > div > img{
+    max-height: 100%;
+    width: 20px;
+}
+.profile-body-post-info > div > span{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+.profile-post-ctn{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(0,0,0,0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+#profilePostClose{
+    right: -20px;
+    top: -20px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    font-weight: 600;
+}
+.profile-post{
+    width: 935px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+.profile-post-content{
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+.profile-post-content > img{
+    width: 100%;
+    max-height: 100%;
+}
+.profile-post-info-ctn{
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+}
+.profile-post-info-header{
+    height: 72px;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-post-info-header-wrapper{
+    height: 34px;
+    width: 302px;
+    display: flex;
+    justify-content: space-between;
+}
+.profile-post-info-header-wrapper > div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+}
+.profile-post-info-header-wrapper > div:nth-of-type(1) > img{
+    width: 32px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+.profile-post-info-header-wrapper > div:nth-of-type(1) > span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-post-info-header-wrapper > div:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.profile-post-description{
+    width: 290px;
+    margin-top: 23px;
+    margin-left: 16px;
+    margin-right: 29px;
+    display: flex;
+    height: 336px;
+}
+.profile-post-description-image{
+    width: 50px;
+    height: 100%;
+}
+.profile-post-description-image > img{
+    width: 32px;
+    border-radius: 50px;
+}
+.profile-post-description-text{
+    width: 240px;
+}
+.profile-post-description-text > span:nth-of-type(1){
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.profile-post-description-text > span:nth-of-type(2){
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.profile-post-reactions-ctn{
+    height: 113px;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    position: relative;
+}
+.profile-post-reactions-buttons{
+    width: 305px;
+    margin-top: 13px;
+    margin-left: 17px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.profile-post-reactions-buttons > svg{
+    cursor: pointer;
+}
+.profile-post-reactions-like-info{
+    margin-top: 10px;
+    margin-left: 19px;
+    height: 22px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.profile-post-reactions-like-info > img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50px;
+    margin-right: 6px;
+}
+.profile-post-reactions-like-info > span{
+    font-family: 'Roboto', sans-serif;
+    line-height: 10px;
+    font-size: 13px;
+}
+.profile-post-reactions-like-info > span:nth-of-type(2){
+    font-weight: 600;
+}
+.profile-post-posted-at{
+    position: absolute;
+    bottom: 14px;
+    left: 18px;
+    text-transform: uppercase;
+    color: rgb(142, 142, 142);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+.profile-post-comment-ctn{
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
+}
+.profile-post-emoji-set{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.profile-post-write-comment > input{
+    color: rgb(146, 145, 145);
+    width: 200px;
+    border: none;
+    outline: none;
+}
+.profile-post-send-comment > button{
+    color: rgb(179, 224, 253);
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+}

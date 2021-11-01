@@ -1,0 +1,236 @@
+.config-ctn{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    background-color: rgb(250, 250, 250);
+}
+.config{
+    width: 933px;
+    height: 817px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    background-color: #fff;
+    display: flex;
+}
+.config-left-ctn{
+    width: 237px;
+    height: 100%;
+    border-right: 1px solid rgb(219, 219, 219);
+    position: relative;
+}
+.config-left-item-selected{
+    height: 52px;
+    border-left: 2px solid rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.config-left-item{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.config-left-item:hover{
+    border-left: 2px solid rgb(219, 219, 219);
+    background-color: rgb(250, 250, 250);
+    padding-left: 28px;
+}
+.config-left-ctn > a{
+    color: rgb(0, 149, 246);
+    margin-left: 30px;
+    display: block;
+    width: 130px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 11px;
+    line-height: 25px;
+}
+.config-facebook-info{
+    height: 190px;
+    border-top: 1px solid rgb(219, 219, 219);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.config-facebook-title-wrapper{
+    margin-bottom: 13px;
+}
+.config-facebook-account-center{
+    color: rgb(0, 149, 246);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+.config-facebook-info > span{
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+}
+.config-main-ctn{
+    width: 697px;
+    display: grid;
+    grid-template-columns: 165px 1fr;
+    grid-template-rows: 40px 75px 75px 30px 58px 65px 45px 45px 45px 45px;
+    column-gap: 32px;
+    row-gap: 16px;
+    padding-top: 35px;
+}
+.config-main-ctn > img{
+    width: 40px;
+    justify-self: end;
+    border-radius: 50px;
+}
+.config-main-update-image-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.config-main-update-image-text > span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.config-main-update-image-text > button{
+    color:rgb(0, 149, 246);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+    width: 128px;
+    cursor: pointer;
+}
+.config-main-ctn > span{
+    justify-self: end;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    position: relative;
+    transform: translateY(5px);
+}
+.config-main-alter-name-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.config-main-alter-name-wrapper > input{
+    width: 355px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    padding-left: 11px;
+    font-size: 15px;
+}
+.config-main-alter-name-wrapper > span{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(142, 142, 142);
+    font-size: 11px;
+    width: 335px;
+}
+.config-main-alter-username-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.config-main-alter-username-wrapper > input{
+    width: 355px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    padding-left: 11px;
+    font-size: 15px;
+}
+.config-main-alter-username-wrapper > span{
+    width: 335px;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(142, 142, 142);   
+}
+.config-main-ctn > input{
+    width: 355px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    padding-left: 11px;
+    font-size: 15px;
+}
+.config-main-ctn > textarea{
+    border-radius: 3px;
+    border: 1px solid rgb(219, 219, 219);
+    width: 355px;
+    height: 58px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.alter-profile-photo{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.alter-profile-photo-menu{
+    width: 400px;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alter-profile-photo-image{
+    height: 50px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alter-profile-photo-image > img{
+    width: 58px;
+    height: 58px;
+    border-radius: 50px;
+}
+.alter-profile-photo-menu > span:nth-of-type(1){
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.alter-profile-photo-menu > span:nth-of-type(2){
+    color: rgb(142, 142, 142);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.alter-profile-photo-menu > button{
+    height: 48px;
+    border: none;
+    border-top: 1px solid rgb(219, 219, 219);
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+    color: rgb(0, 149, 246);
+    font-weight: 600;
+}

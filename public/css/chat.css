@@ -1,0 +1,70 @@
+.chat-ctn{
+    padding-top: 20px;
+    height: 1300px;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+}
+.chat{
+    width: 934px;
+    height: 100%;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    background-color: #fff;
+}
+.chat-left-ctn{
+    width: 350px;
+    height: 100%;
+    border-right: 1px solid rgb(219, 219, 219);
+}
+.chat-left-user-options{
+    height: 60px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.chat-left-choose-user{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.chat-left-choose-user > span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+.chat-left-user-friend{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.chat-left-user-friend:hover{
+    background-color: rgb(250, 250, 250);
+}
+.chat-left-user-friend > img{
+    width: 58px;
+    border-radius: 50px;
+    margin-right: 12px;
+}
+.chat-left-user-friend-text-wrapper{
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chat-left-user-friend-text-wrapper > span:nth-of-type(1){
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+.chat-left-user-friend-text-wrapper > span:nth-of-type(2){
+    color: rgb(142, 142, 142);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}

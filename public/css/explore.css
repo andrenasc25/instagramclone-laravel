@@ -1,0 +1,21 @@
+.explore-ctn{
+    height: 1300px;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.explore{
+    width: 935px;
+    height: 100%;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 290px 290px 290px;
+    grid-template-rows: 290px 290px 290px 290px 290px;
+    justify-content: space-between;
+    column-gap: 28px;
+    row-gap: 28px;
+}
+.explore-post{
+    border: 1px solid #000;
+}
