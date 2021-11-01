@@ -127,10 +127,10 @@
                 </div>
                 <div class="main-side-wrapper">
                     <div class="main-side-profile-ctn">
-                        <img src="asset($user->user_profile_image_url)">
+                        <img src="{{Auth::user()->user_profile_image_url == '' ? asset('assets/profile-icon.png') : Auth::user()->user_profile_image_url}}">
                         <div class="main-side-profile-text-wrapper">
-                            <span>$user->username</span>
-                            <span>$user->full_name</span>
+                            <span>{{Auth::user()->name}}</span>
+                            <span>{{Auth::user()->name}}</span>
                         </div>
                         <span>Mudar</span>
                     </div>
