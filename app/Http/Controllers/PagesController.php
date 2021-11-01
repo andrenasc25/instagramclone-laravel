@@ -18,6 +18,6 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('pages.public.home');
+        return view('pages.user.home');
     }
 }

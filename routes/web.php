@@ -22,6 +22,7 @@ Route::get('activate/{mail}',[AuthController::class, 'verifyMail'])->name('activ
 
 //Public Pages
 Route::get('/signup', [PagesController::class, 'signup']);
-Route::get('/auth', [PagesController::class, 'auth']);
+Route::get('/auth', [PagesController::class, 'auth'])->name('auth');
 
 //User Pages
+Route::get('/', [PagesController::class, 'home'])->middleware('auth');
