@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //Auth
 Route::post('auth/signup', [AuthController::class, 'register']);
+Route::get('activate/{mail}',[AuthController::class, 'verifyMail'])->name('activateLink')->middleware('signed');
 
 //Pages
 Route::get('/signup', [PagesController::class, 'signup']);

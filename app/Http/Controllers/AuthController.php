@@ -36,4 +36,15 @@ class AuthController extends Controller
 
         return 'Email de confirmação enviado para o email: ' . $email;
     }
+
+    public function verifyMail(Request $request)
+    {
+        User::where('email', $request->mail)
+            ->update([
+                'email_verified_at' => date('Y-m-d H:i:s'),
+                'user_status' => 0
+            ]);
+
+        return 'Email verificado com sucesso';
+    }
 }
