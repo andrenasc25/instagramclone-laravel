@@ -69,7 +69,10 @@
                         <span>Trocar de Conta</span>
                     </div>
                     <div id="logout" class="profile-button-menu-logout-wrapper">
-                        <span>Sair</span>
+                        <form method="post" action="/auth/logout" style="border:1px solid #000;">
+                            @csrf
+                            <button type="submit">Sair</button>
+                        </form>
                     </div>
                 </div>
             </button>

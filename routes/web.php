@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('auth')->group(function(){
     Route::post('signup', [AuthController::class, 'register']);
     Route::post('login', [AuthController::class, 'login']);
+    Route::post('logout', [AuthController::class, 'logout']);
 });
 Route::get('activate/{mail}',[AuthController::class, 'verifyMail'])->name('activateLink')->middleware('signed');
 
