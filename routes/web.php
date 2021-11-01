@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Auth
+Route::post('auth/signup', [AuthController::class, 'register']);
+
+//Pages
 Route::get('/signup', [PagesController::class, 'signup']);

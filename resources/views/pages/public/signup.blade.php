@@ -16,11 +16,11 @@
                     <span>Ou</span>
                     <div></div>
                 </div>
-                <form id="signupForm" class="signup-form">
-                    <input type="text" class="signup-input-text" id="phoneOrEmail" placeholder="Número do celular ou email" style="margin-bottom:8px;">
-                    <input type="text" class="signup-input-text" id="fullName" placeholder="Nome completo" style="margin-bottom:8px;">
+                <form method="post" action="/signup" class="signup-form">
+                    <input type="text" class="signup-input-text" name="email" id="phoneOrEmail" placeholder="Número do celular ou email" style="margin-bottom:8px;">
+                    <input type="text" class="signup-input-text" name="name" id="fullName" placeholder="Nome completo" style="margin-bottom:8px;">
                     <input type="text" class="signup-input-text" id="username" placeholder="Nome de usuário" style="margin-bottom:8px;">
-                    <input type="password" class="signup-input-text" id="password" placeholder="Senha" style="margin-bottom:15px;">
+                    <input type="password" class="signup-input-text" name="password" id="password" placeholder="Senha" style="margin-bottom:15px;">
                     <button type="submit" class="signup-button">
                         Cadastre-se
                     </button>
