@@ -33,3 +33,4 @@ Route::get('/', [PagesController::class, 'home'])->middleware('auth');
 Route::get('/profile', [PagesController::class, 'profile'])->middleware('auth');
 Route::get('/chat', [PagesController::class, 'chat'])->middleware('auth');
 Route::get('/explore', [PagesController::class, 'explore'])->middleware('auth');
+Route::get('/config', [PagesController::class, 'config'])->middleware('auth');

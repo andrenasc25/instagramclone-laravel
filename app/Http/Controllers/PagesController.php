@@ -41,4 +41,9 @@ class PagesController extends Controller
     {
         return view('pages.user.explore');
     }
+
+    public function config()
+    {
+        return view('pages.user.config');
+    }
 }
