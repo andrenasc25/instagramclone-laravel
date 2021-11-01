@@ -16,7 +16,8 @@
                     <span>Ou</span>
                     <div></div>
                 </div>
-                <form method="post" action="/signup" class="signup-form">
+                <form method="post" action="/auth/signup" class="signup-form">
+                    @csrf
                     <input type="text" class="signup-input-text" name="email" id="phoneOrEmail" placeholder="Número do celular ou email" style="margin-bottom:8px;">
                     <input type="text" class="signup-input-text" name="name" id="fullName" placeholder="Nome completo" style="margin-bottom:8px;">
                     <input type="text" class="signup-input-text" id="username" placeholder="Nome de usuário" style="margin-bottom:8px;">
