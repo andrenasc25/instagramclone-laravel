@@ -37,6 +37,30 @@ class AuthController extends Controller
         return 'Email de confirmação enviado para o email: ' . $email;
     }
 
+    public function login(Request $request)
+    {
+        //Get data from the user
+        $email = $request->email;
+        $password = $request->password;
+
+        //Validating credentials by existing and their types
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+
+        //Attempt to login
+        if(Auth::attempt(['email' => $email, 'password' => $password, 'user_status' => 0])){
+            $request->session()->regenerate();
+            return redirect()->intended('/');
+        }
+
+        //Error if credentials are incorrect
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.'
+        ]);
+    }
+
     public function verifyMail(Request $request)
     {
         User::where('email', $request->mail)

@@ -6,9 +6,10 @@
             <div class="auth-signup-ctn">
                 <div class="auth-signup-wrapper">
                     <img src="{{asset('assets/logo-auth.png')}}">
-                    <form id="authForm" class="auth-form">
-                        <input type="text" class="auth-input" id="phoneUsernameOrEmail" placeholder="Telefone, nome de usuário ou email" style="margin-bottom:8px;">
-                        <input type="password" class="auth-input" id="password" placeholder="Senha" style="margin-bottom:14px;">
+                    <form method="post" action="/auth/login" class="auth-form">
+                        @csrf
+                        <input type="text" class="auth-input" name="email" id="phoneUsernameOrEmail" placeholder="Telefone, nome de usuário ou email" style="margin-bottom:8px;">
+                        <input type="password" class="auth-input" name="password" id="password" placeholder="Senha" style="margin-bottom:14px;">
                         <button type="submit" class="auth-submit">Entrar</button>
                     </form>
                     <div class="auth-signup-or-ctn">
@@ -37,7 +38,7 @@
         </div>
     </section>
     <script>
-        document.getElementById('authForm').addEventListener('submit', (e) =>{
+        /*document.getElementById('authForm').addEventListener('submit', (e) =>{
             e.preventDefault();
             //Get data from the form
             var formData = new FormData();
@@ -50,6 +51,6 @@
                 setCookie('access-token', response.data.access_token, 1);
                 window.location.assign('http://localhost:8000');
             })
-        });
+        });*/
     </script>
 @endsection
