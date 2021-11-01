@@ -30,3 +30,4 @@ Route::get('/auth', [PagesController::class, 'auth'])->name('auth');
 
 //User Pages
 Route::get('/', [PagesController::class, 'home'])->middleware('auth');
+Route::get('/profile', [PagesController::class, 'profile'])->middleware('auth');

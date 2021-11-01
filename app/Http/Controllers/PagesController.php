@@ -26,4 +26,9 @@ class PagesController extends Controller
     {
         return view('pages.user.home');
     }
+
+    public function profile()
+    {
+        return view('pages.user.profile');
+    }
 }
