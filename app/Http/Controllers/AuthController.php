@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Mail\MailSend;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 
 class AuthController extends Controller
@@ -26,7 +27,7 @@ class AuthController extends Controller
 
         //If the data is inserted successfully, create a temporary link to be sent via email
         $url = URL::temporarySignedRoute(
-            'activateLink', now()->addMinutes(30), ['mail' => $mail]
+            'activateLink', now()->addMinutes(30), ['mail' => $email]
         );
 
         //Send the created link to the user's email
