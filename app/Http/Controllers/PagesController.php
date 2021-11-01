@@ -36,4 +36,9 @@ class PagesController extends Controller
     {
         return view('pages.user.chat');
     }
+
+    public function explore()
+    {
+        return view('pages.user.explore');
+    }
 }
