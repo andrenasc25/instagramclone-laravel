@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('auth/signup', [AuthController::class, 'register']);
 Route::get('activate/{mail}',[AuthController::class, 'verifyMail'])->name('activateLink')->middleware('signed');
 
-//Pages
-Route::get('/', [PagesController::class, 'home']);
+//Public Pages
 Route::get('/signup', [PagesController::class, 'signup']);
+Route::get('/auth', [PagesController::class, 'auth']);
+
+//User Pages
