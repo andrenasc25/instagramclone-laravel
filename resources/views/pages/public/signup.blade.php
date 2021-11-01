@@ -42,7 +42,7 @@
         </div>
     </section>
     <script>
-        document.getElementById('signupForm').addEventListener('submit', (e) => {
+        /*document.getElementById('signupForm').addEventListener('submit', (e) => {
             e.preventDefault();
             var formData = new FormData();
             //Getting data from the form
@@ -56,6 +56,6 @@
             }).then((response) => {
                 console.log(response.data);
             })
-        });
+        });*/
     </script>
 @endsection
