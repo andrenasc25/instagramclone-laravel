@@ -35,7 +35,7 @@
                 </div>
                 <div class="profile-upload-ctn">
                     <div class="profile-upload-wrapper">
-                        <input id="uploadPost" type="file" style="position:absolute;border:1px solid #000;width:100%;height:100%;cursor:pointer;opacity:0;">
+                        <input id="postAdd" type="file" style="position:absolute;border:1px solid #000;width:100%;height:100%;cursor:pointer;opacity:0;">
                         <svg style="enable-background:new 0 0 48 48;width:100px;" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <style type="text/css">
                                 .st0{display:none;}
@@ -92,10 +92,10 @@
         </div>
     </section>
     <script>
-        document.getElementById('uploadPost').addEventListener('change', () => {
+        document.getElementById('postAdd').addEventListener('change', () => {
             var formData = new FormData()
-            formData.append('uploadPost', document.querySelector('#uploadPost').files[0])
-            axios.post('/user/uploadPost/', formData, {
+            formData.append('postAdd', document.querySelector('#postAdd').files[0])
+            axios.post('/user/post-add/', formData, {
 
             }).then((response) => {
                 window.location.href = response.data

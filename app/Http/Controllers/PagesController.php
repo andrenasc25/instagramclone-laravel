@@ -46,4 +46,9 @@ class PagesController extends Controller
     {
         return view('pages.user.config');
     }
+
+    public function newPost()
+    {
+        return view('pages.user.newPost');
+    }
 }
