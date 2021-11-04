@@ -19,9 +19,11 @@ class PagesController extends Controller
         return view('pages.public.auth');
     }
 
-    public function profileOther()
+    public function profileOther(Request $request)
     {
-        return view('pages.public.profileOther');
+        return view('pages.public.profileOther',[
+            'routename' => $request->username
+        ]);
     }
 
     /**
