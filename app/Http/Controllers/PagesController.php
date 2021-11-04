@@ -19,6 +19,11 @@ class PagesController extends Controller
         return view('pages.public.auth');
     }
 
+    public function profileOther()
+    {
+        return view('pages.public.profileOther');
+    }
+
     /**
      * User Pages
      */

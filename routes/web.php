@@ -40,3 +40,4 @@ Route::get('/chat', [PagesController::class, 'chat'])->middleware('auth');
 Route::get('/explore', [PagesController::class, 'explore'])->middleware('auth');
 Route::get('/config', [PagesController::class, 'config'])->middleware('auth');
 Route::get('/newPost', [PagesController::class, 'newPost'])->name('newPost')->middleware(['auth', 'signed']);
+Route::get('/{username}', [PagesController::class, 'profileOther']);
