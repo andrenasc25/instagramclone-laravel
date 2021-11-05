@@ -129,7 +129,7 @@
                     <div class="main-side-profile-ctn">
                         <img src="{{Auth::user()->user_profile_image_url == '' ? asset('assets/profile-icon.png') : Auth::user()->user_profile_image_url}}">
                         <div class="main-side-profile-text-wrapper">
-                            <span>{{Auth::user()->name}}</span>
+                            <span>{{Auth::user()->username}}</span>
                             <span>{{Auth::user()->name}}</span>
                         </div>
                         <span>Mudar</span>
