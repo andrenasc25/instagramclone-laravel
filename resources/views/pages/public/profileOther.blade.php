@@ -78,7 +78,9 @@
     </section>
     <script>
         document.getElementById('follow').addEventListener('click', () => {
-            axios.post('/user/add-friend/', null,{
+            var formData = new FormData()
+            formData.append('newFriend', document.getElementById('follow').value)
+            axios.post('/user/add-friend/', formData,{
 
             }).then((response) => {
                 console.log(response.data)

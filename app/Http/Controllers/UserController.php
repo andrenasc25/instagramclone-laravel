@@ -72,8 +72,19 @@ class UserController extends Controller
         return 'Postagem feita com sucesso';
     }
 
-    public function addFriend()
+    public function addFriend(Request $request)
     {
-        return 'ok';
+        //Get new friend's user's id
+        $friendId = User::where('username', $request->newFriend)
+                        ->value('id');
+        
+        //Add new friend
+        DB::insert('insert into users_friends
+            (user_id, friend_id)
+            values (?,?)',
+            [Auth::user()->id, $friendId]
+        );
+
+        return 'Friend added successfully';
     }
 }
