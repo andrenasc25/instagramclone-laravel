@@ -20,7 +20,7 @@
                     @csrf
                     <input type="text" class="signup-input-text" name="email" id="phoneOrEmail" placeholder="Número do celular ou email" style="margin-bottom:8px;">
                     <input type="text" class="signup-input-text" name="name" id="fullName" placeholder="Nome completo" style="margin-bottom:8px;">
-                    <input type="text" class="signup-input-text" id="username" placeholder="Nome de usuário" style="margin-bottom:8px;">
+                    <input type="text" class="signup-input-text" name="username" id="username" placeholder="Nome de usuário" style="margin-bottom:8px;">
                     <input type="password" class="signup-input-text" name="password" id="password" placeholder="Senha" style="margin-bottom:15px;">
                     <button type="submit" class="signup-button">
                         Cadastre-se
