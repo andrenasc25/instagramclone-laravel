@@ -57,7 +57,7 @@
                 </div>
                 <span>Nome de usuário</span>
                 <div class="config-main-alter-username-wrapper">
-                    <input id="username" type="text" value="{{Auth::user()->name}}">
+                    <input id="username" type="text" value="{{Auth::user()->username}}">
                     <span>Na maioria dos casos, você poderá alterar seu nome de usuário novamente para fotosdoandre_ por mais 14 dias. Saiba mais</span>
                 </div>
                 <span>Site</span>
@@ -111,7 +111,7 @@
         document.getElementById('profileImage').addEventListener('change', () => {
             var formData = new FormData()
             formData.append('file', document.querySelector('#profileImage').files[0])
-            axios.post('/user/profileImage/', formData, {
+            axios.post('/user/change-profile-image/', formData, {
 
             }).then((response) => {
                 window.location.reload(true)

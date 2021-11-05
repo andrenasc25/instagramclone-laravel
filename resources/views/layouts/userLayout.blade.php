@@ -25,7 +25,7 @@
     <div class="alter-profile-photo">
         <div class="alter-profile-photo-menu">
             <div class="alter-profile-photo-image">
-                <img src="asset($user->user_profile_image_url)">
+                <img src="{{Auth::user()->user_profile_image_url == '' ? asset('assets/profile-icon.png') : Auth::user()->user_profile_image_url}}">
             </div>
             <span>Foto do perfil sincronizada</span>
             <span>Instagram, Facebook</span>

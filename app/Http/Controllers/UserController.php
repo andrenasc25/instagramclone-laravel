@@ -88,4 +88,20 @@ class UserController extends Controller
 
         return 'Friend added successfully';
     }
+
+    public function changeProfileImage(Request $request)
+    {
+        //Upload new profile image
+        $publicDirectory = new PublicDirectory('/users/' . Auth::user()->email . '/profileImage');
+        $publicDirectory->mkdir();
+        $publicDirectory->upload($request->file);
+        return '';
+
+        //Add new profile image in the database
+        User::create([
+            'user_profile_image_url' => $userProfileImageUrl
+        ]);
+
+        return 'Profile Image updated successfully';
+    }
 }
