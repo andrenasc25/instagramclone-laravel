@@ -5,7 +5,7 @@
         <div class="profile">
             <div class="profile-header">
                 <div class="profile-picture-ctn">
-                    <img src="{{asset('')}}">
+                    <img src="{{Auth::user()->user_profile_image_url == '' ? asset('assets/profile-icon.png') : Auth::user()->user_profile_image_url}}">
                 </div>
                 <div class="profile-info-ctn">
                     <div class="profile-info-wrapper">
