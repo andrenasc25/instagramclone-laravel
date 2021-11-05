@@ -11,7 +11,7 @@
                     <div class="profile-info-wrapper">
                         <div class="profile-info-edit-wrapper">
                             <span>{{$routename}}</span>
-                            <button style="background-color:#0095F6;color:#fff;width:90px;border:none">
+                            <button id="follow" value="{{$routename}}" style="background-color:#0095F6;color:#fff;width:90px;border:none">
                                 Seguir
                             </button>
                         </div>
@@ -77,13 +77,11 @@
         </div>
     </section>
     <script>
-        document.getElementById('postAdd').addEventListener('change', () => {
-            var formData = new FormData()
-            formData.append('postAdd', document.querySelector('#postAdd').files[0])
-            axios.post('/user/post-add/', formData, {
+        document.getElementById('follow').addEventListener('click', () => {
+            axios.post('/user/add-friend/', null,{
 
             }).then((response) => {
-                window.location.href = response.data
+                console.log(response.data)
             })
         })
     </script>

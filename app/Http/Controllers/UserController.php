@@ -71,4 +71,9 @@ class UserController extends Controller
 
         return 'Postagem feita com sucesso';
     }
+
+    public function addFriend()
+    {
+        return 'ok';
+    }
 }

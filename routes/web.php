@@ -28,6 +28,7 @@ Route::get('/activate/{mail}',[AuthController::class, 'verifyMail'])->name('acti
 //User
 Route::post('/user/post-add', [UserController::class, 'addPost']);
 Route::post('/user/publish-post', [UserController::class, 'publishPost']);
+Route::post('/user/add-friend', [UserController::class, 'addFriend']);
 
 //Public Pages
 Route::get('/signup', [PagesController::class, 'signup']);
