@@ -10,7 +10,7 @@
                 <div class="profile-info-ctn">
                     <div class="profile-info-wrapper">
                         <div class="profile-info-edit-wrapper">
-                            <span>{{Auth::user()->name}}</span>
+                            <span>{{Auth::user()->username}}</span>
                             <button>Editar perfil</button>
                             <img src="{{asset('assets/config-icon.png')}}">
                         </div>
