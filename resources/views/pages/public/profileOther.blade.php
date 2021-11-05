@@ -11,7 +11,9 @@
                     <div class="profile-info-wrapper">
                         <div class="profile-info-edit-wrapper">
                             <span>{{$routename}}</span>
-                            <button>Enviar mensagem</button>
+                            <button style="background-color:#0095F6;color:#fff;width:90px;border:none">
+                                Seguir
+                            </button>
                         </div>
                         <div class="profile-info-acquaitances">
                             <div class="profile-info-acquaitances-publications">
