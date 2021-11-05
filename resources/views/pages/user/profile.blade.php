@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="profile-body-posts-ctn">
-                    foreach($userPosts as $userPost)
+                    @foreach($userPosts as $userPost)
                         <div class="profile-body-post">
                             <div class="profile-body-post-info">
                                 <div>
@@ -84,9 +84,9 @@
                                     <span>0</span>
                                 </div>
                             </div>
-                            <img class="post-image" src="asset('users/' . $user->email . '/' . $userPost->post_content_url)">
+                            <img class="post-image" src="{{asset('users/' . $userPost->email . '/' . $userPost->url)}}">
                         </div>
-                    endforeach
+                    @endforeach
                 </div>
             </div>
         </div>

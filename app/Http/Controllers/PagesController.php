@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
@@ -36,7 +38,14 @@ class PagesController extends Controller
 
     public function profile()
     {
-        return view('pages.user.profile');
+        $userPosts = User::where('users.id', Auth::user()->id)
+                        ->join('users_posts', 'user_id', '=', 'users.id')
+                        ->join('users_posts_media', 'users_posts_media.user_post_id', '=', 'users_posts.id')
+                        ->get();
+
+        return view('pages.user.profile',[
+            'userPosts' => $userPosts
+        ]);
     }
 
     public function chat()
