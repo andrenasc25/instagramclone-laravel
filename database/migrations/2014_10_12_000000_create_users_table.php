@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             
             //Columns that reflect the table's name
             $table->string('name');
+            $table->string('username');
             $table->string('email')->unique();
             $table->string('password');
             $table->Integer('user_address_cep')->nullable();
