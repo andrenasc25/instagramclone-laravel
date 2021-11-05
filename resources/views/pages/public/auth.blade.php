@@ -37,20 +37,4 @@
             </div>
         </div>
     </section>
-    <script>
-        /*document.getElementById('authForm').addEventListener('submit', (e) =>{
-            e.preventDefault();
-            //Get data from the form
-            var formData = new FormData();
-            formData.append('email', document.getElementById('phoneUsernameOrEmail').value);
-            formData.append('password', document.getElementById('password').value);
-            //Send data
-            axios.post('/login', formData,{
-
-            }).then((response) => {
-                setCookie('access-token', response.data.access_token, 1);
-                window.location.assign('http://localhost:8000');
-            })
-        });*/
-    </script>
 @endsection
