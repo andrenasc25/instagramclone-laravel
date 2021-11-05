@@ -76,14 +76,14 @@ class UserController extends Controller
     public function addFriend(Request $request)
     {
         //Get new friend's user's id
-        $friendId = User::where('username', $request->newFriend)
+        $followedUserId = User::where('username', $request->newFriend)
                         ->value('id');
         
         //Add new friend
-        DB::insert('insert into users_friends
-            (user_id, friend_id)
+        DB::insert('insert into users_follows
+            (user_id, followed_user_id)
             values (?,?)',
-            [Auth::user()->id, $friendId]
+            [Auth::user()->id, $followedUserId]
         );
 
         return 'Friend added successfully';

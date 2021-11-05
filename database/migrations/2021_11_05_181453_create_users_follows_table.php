@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersFriendsTable extends Migration
+class CreateUsersFollowsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateUsersFriendsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_friends', function (Blueprint $table) {
+        Schema::create('users_follows', function (Blueprint $table) {
             $table->id();
-            
+
             //Foreign keys
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('friend_id');
-            $table->foreign('friend_id')->references('id')->on('users');
+            $table->unsignedBigInteger('followed_user_id');
+            $table->foreign('followed_user_id')->references('id')->on('users');
 
             $table->timestamp('created_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'));
         });
@@ -33,6 +33,6 @@ class CreateUsersFriendsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users_friends');
+        Schema::dropIfExists('users_follows');
     }
 }
