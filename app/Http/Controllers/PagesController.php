@@ -33,11 +33,15 @@ class PagesController extends Controller
      */
     public function home()
     {
-        return view('pages.user.home');
+        return view('pages.user.home', [
+            //Get followed's posts
+            
+        ]);
     }
 
     public function profile()
     {
+        //Get user's posts
         $userPosts = User::where('users.id', Auth::user()->id)
                         ->join('users_posts', 'user_id', '=', 'users.id')
                         ->join('users_posts_media', 'users_posts_media.user_post_id', '=', 'users_posts.id')

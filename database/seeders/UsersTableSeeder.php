@@ -35,5 +35,16 @@ class UsersTableSeeder extends Seeder
             'email_verified_at' => '2021-11-05 21:28:34',
             'created_at' => '2021-11-05 18:28:01'
         ]);
+
+        User::create([
+            'name' => 'Third User',
+            'username' => 'third',
+            'email' => 'third@user.com',
+            'password' => '$2y$10$JuE/wC0q04iBf49DQvEbUu8S.kXerZUGOUQB.srLIvxAT8xliBkg2',
+            'user_access_level' => 1,
+            'user_status' => 0,
+            'email_verified_at' => '2021-11-05 23:05:09',
+            'created_at' => '2021-11-05 20:04:38'
+        ]);
     }
 }
