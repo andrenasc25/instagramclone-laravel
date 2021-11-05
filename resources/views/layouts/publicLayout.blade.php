@@ -8,6 +8,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/profileOther.css') }}" rel="stylesheet">
     <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
     <script src="{{asset('js/vendor/axios.min.js')}}"></script>
     <title>Instagram Clone</title>

@@ -10,7 +10,7 @@
                 <div class="profile-info-ctn">
                     <div class="profile-info-wrapper">
                         <div class="profile-info-edit-wrapper">
-                            <span>{{'username'}}</span>
+                            <span>{{$routename}}</span>
                             <button>Enviar mensagem</button>
                         </div>
                         <div class="profile-info-acquaitances">
