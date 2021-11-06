@@ -16,9 +16,8 @@
     <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
     <link href="{{ asset('css/uploadPost.css') }}" rel="stylesheet">
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="{{asset('js/vendor/axios.min.js')}}"></script>
+    <script src="{{asset('js/vendor/vue.js')}}"></script>
     <title>Instagram Clone</title>
 </head>
 <body>
@@ -37,7 +36,9 @@
             <button id="alterProfilePhotoCancel" style="font-weight:400;color:#000;border-radius:0px 0px 13px 13px;">Cancelar</button>
         </div>
     </div>
-    @yield('content')
+    <div id="app">
+        @yield('content')
+    </div>
     <script>
         //Get profile button element
        var profileButton = document.getElementById("profileButton");
