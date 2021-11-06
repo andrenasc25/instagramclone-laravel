@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -33,9 +34,14 @@ class PagesController extends Controller
      */
     public function home()
     {
+        //Get followed's posts
+        $posts = DB::table('users_posts')
+                    ->join('users', 'users_posts.user_id', '=', 'users.id')
+                    ->join('users_posts_media', 'users_posts_media.user_post_id', '=', 'users_posts.id')
+                    ->get(['username', 'text', 'url', 'user_id', 'email']);
+
         return view('pages.user.home', [
-            //Get followed's posts
-            
+            'posts' => $posts
         ]);
     }
 
