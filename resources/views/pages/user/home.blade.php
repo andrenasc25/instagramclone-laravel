@@ -201,7 +201,9 @@
                 </div>
             </div>
         <script>
-            
+            const app = Vue.createApp({
+                
+            })
         </script>
     </section>
 @endsection
