@@ -41,22 +41,12 @@
     </div>
     <script>
         //Get profile button element
-       var profileButton = document.getElementById("profileButton");
+        var profileButton = document.getElementById("profileButton");
         var profileButtonMenu = document.getElementById("profileButtonMenu");
         profileButton.addEventListener("click", () => {
             profileButton.setAttribute("style", "padding:2px;border:1px solid #000");
             profileButtonMenu.setAttribute("style", "display:block;");
         });
-        //Logout button
-        /*document.getElementById('logout').addEventListener('click', () => {
-            console.log('logout');
-            axios.post('/logout', {
-
-            }).then((response) => {
-                console.log('logged out');
-                window.location.assign('http://localhost:8000');
-            })
-        });/*
         //Search button
         document.getElementsByClassName('header-search-ctn-noclick')[0].addEventListener('click', () => {
             document.getElementsByClassName('header-search-ctn-noclick')[0].setAttribute('style', 'display:none;')
@@ -66,7 +56,7 @@
         document.getElementById('header-search-close').addEventListener('click', () => {
             document.getElementsByClassName('header-search-ctn-onclick')[0].setAttribute('style', 'display:none;')
             document.getElementsByClassName('header-search-ctn-noclick')[0].setAttribute('style', 'display:flex;')
-        })*/
+        })
     </script>
 </body>
 </html>
