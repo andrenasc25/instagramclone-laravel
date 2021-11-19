@@ -188,12 +188,22 @@
     height: 41px;
     display: flex;
     align-items: center;
-    padding-left: 16px;
     position: relative;
     transform: translateY(4px);
     border-top: 1px solid rgb(219, 219, 219);
     border-radius: 0px 0px 5px 5px;
-    border: 1px solid #000;
+}
+.profile-button-menu-logout-wrapper > form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+}
+.profile-button-menu-logout-wrapper > form > input{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 .profile-button-menu-logout-wrapper:hover{
     background-color: rgb(250, 250, 250);

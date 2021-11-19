@@ -69,9 +69,9 @@
                         <span>Trocar de Conta</span>
                     </div>
                     <div class="profile-button-menu-logout-wrapper">
-                        <form method="post" action="/auth/logout">
+                        <form method="post" action="{{asset('/auth/logout')}}">
                             @csrf
-                            <button type="submit">Sair</button>
+                            <input type="submit" value="Sair">
                         </form>
                     </div>
                 </div>
