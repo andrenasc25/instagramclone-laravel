@@ -16,7 +16,7 @@ class StoragePublic
         $this->newFileName = $newFileName;
     }
 
-    public function fileUpload($file = '')
+    public function fileUpload($file)
     {
         //If no new name is provided by the user
         if($this->newFileName == '')
