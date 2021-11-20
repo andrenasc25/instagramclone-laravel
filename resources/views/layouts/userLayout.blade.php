@@ -28,10 +28,13 @@
         //Get profile button element
         var profileButton = document.getElementById("profileButton");
         var profileButtonMenu = document.getElementById("profileButtonMenu");
+
+        //Show menu button by clicking on it
         profileButton.addEventListener("click", () => {
             profileButton.setAttribute("style", "padding:2px;border:1px solid #000");
             profileButtonMenu.setAttribute("style", "display:block;");
         });
+
         //Search button
         document.getElementsByClassName('header-search-ctn-noclick')[0].addEventListener('click', () => {
             document.getElementsByClassName('header-search-ctn-noclick')[0].setAttribute('style', 'display:none;')
