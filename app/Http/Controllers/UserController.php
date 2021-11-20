@@ -18,7 +18,7 @@ class UserController extends Controller
         //Upload the image or the video into the temporaryPosts folder
         $newFileName = base64_encode(Auth::user()->email . 'temporary' . date('Y-m-d H:i:s')) . '.jpg';
         $storagePublic = new StoragePublic('temporaryPosts/', $newFileName);
-        dd($storagePublic->fileUpload($request->postAdd));
+        $storagePublic->fileUpload($request->postAdd);
 
         //Create signed route url to allow using the upload page
         $url = URL::temporarySignedRoute(
