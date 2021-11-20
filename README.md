@@ -59,7 +59,7 @@ O Banco de dados relacional foi feito com restrições para ligar as chaves extr
 
 ###### Página de configurações
 
-![alt text](http://andrenascimento.com/external_images/instagram-clone/configd.png)
+![alt text](http://andrenascimento.com/external_images/instagram-clone/config.png)
 
 ###### Página de perfil de usuário
 
