@@ -20,7 +20,7 @@ class StoragePublic
     {
         //If no new name is provided by the user
         if($this->newFileName == '')
-            return '/storage/' . Storage::disk('public')->putFileAs($this->folder, $file);
+            return '/storage/' . Storage::disk('public')->putFileAs($this->folder, $file, $file->getClientOriginalName());
         //If a new name is provided by the user
         else
             return '/storage/' . Storage::disk('public')->putFileAs($this->folder, $file, $this->newFileName);
