@@ -66,7 +66,7 @@ class UserController extends Controller
         //$publicDirectory->mkdir();
         
         //Move file from temporaryPosts to the user's posts folder
-        Storage::move('public/temporaryPosts/' . $postContentUrl, 'public/users/' . Auth::user()->email . '/' . $postContentUrl);
+        Storage::move('storage/temporaryPosts/' . $postContentUrl, 'storage/users/' . Auth::user()->email . '/' . $postContentUrl);
         //File::move(public_path('temporaryPosts/' . $postContentUrl), public_path('users/' . Auth::user()->email . '/' . $postContentUrl));
 
         //Remove file from temporaryPosts folder
