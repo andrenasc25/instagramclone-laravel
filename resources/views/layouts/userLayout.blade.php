@@ -21,21 +21,6 @@
     <title>Instagram Clone</title>
 </head>
 <body>
-    <div class="alter-profile-photo">
-        <div class="alter-profile-photo-menu">
-            <div class="alter-profile-photo-image">
-                <img src="{{Auth::user()->user_profile_image_url == '' ? asset('assets/profile-icon.png') : Auth::user()->user_profile_image_url}}">
-            </div>
-            <span>Foto do perfil sincronizada</span>
-            <span>Instagram, Facebook</span>
-            <button style="position:relative;">
-                <input id="profileImage" type="file" style="position:absolute;cursor:pointer;opacity:0;width:100%;height:100%;border:1px solid #000;left:0;top:0;">Carregar foto
-            </button>
-            <button style="font-weight:400;color:#000;">Gerenciar configurações de sincronização</button>
-            <button style="color:rgb(237,73,86);">Remover foto atual</button>
-            <button id="alterProfilePhotoCancel" style="font-weight:400;color:#000;border-radius:0px 0px 13px 13px;">Cancelar</button>
-        </div>
-    </div>
     <div id="app">
         @yield('content')
     </div>

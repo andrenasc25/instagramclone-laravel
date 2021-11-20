@@ -180,6 +180,7 @@
 }
 .alter-profile-photo{
     position: fixed;
+    top: 0;
     z-index: 5;
     width: 100%;
     height: 100%;
