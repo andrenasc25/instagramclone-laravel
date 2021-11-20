@@ -21,9 +21,7 @@
     <title>Instagram Clone</title>
 </head>
 <body>
-    <div id="app">
-        @yield('content')
-    </div>
+    @yield('content')
     <script>
         //Get profile button element
         var profileButton = document.getElementById("profileButton");
