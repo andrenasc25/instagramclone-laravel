@@ -84,7 +84,7 @@
                                     <span>0</span>
                                 </div>
                             </div>
-                            <img class="post-image" src="{{asset('users/' . $userPost->email . '/' . $userPost->url)}}">
+                            <img class="post-image" src="{{asset('storage/users/' . $userPost->email . '/' . $userPost->url)}}">
                         </div>
                     @endforeach
                 </div>

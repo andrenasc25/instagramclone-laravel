@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="main-post-image-ctn">
-                                    <img src="{{asset('users/' . $post->email . '/' . $post->url)}}">
+                                    <img src="{{asset('storage/users/' . $post->email . '/' . $post->url)}}">
                                 </div>
                                 <div class="main-post-buttons-ctn">
                                     <div class="main-post-buttons-first">
