@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\FileManager\PublicDirectory;
+use App\FileManager\StoragePublic;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,8 +17,8 @@ class UserController extends Controller
     {
         //Upload the image or the video into the temporaryPosts folder
         $newFileName = base64_encode(Auth::user()->email . 'temporary' . date('Y-m-d H:i:s')) . '.jpg';
-        $publicDirectory = new PublicDirectory('temporaryPosts/', $newFileName);
-        $publicDirectory->upload($request->postAdd);
+        $storagePublic = new StoragePublic('temporaryPosts/', $newFileName);
+        dd($storagePublic->fileUpload($request->postAdd));
 
         //Create signed route url to allow using the upload page
         $url = URL::temporarySignedRoute(
