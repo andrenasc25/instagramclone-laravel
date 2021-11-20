@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -61,14 +62,16 @@ class UserController extends Controller
         );
 
         //Make new directory for user's posts
-        $publicDirectory = new PublicDirectory('/users/' . Auth::user()->email);
-        $publicDirectory->mkdir();
-
+        $storagePublic = new StoragePublic('/users/' . Auth::user()->email);
+        //$publicDirectory->mkdir();
+        
         //Move file from temporaryPosts to the user's posts folder
-        File::move(public_path('temporaryPosts/' . $postContentUrl), public_path('users/' . Auth::user()->email . '/' . $postContentUrl));
+        Storage::move('public/temporaryPosts/' . $postContentUrl, 'public/users/' . Auth::user()->email . '/' . $postContentUrl);
+        //File::move(public_path('temporaryPosts/' . $postContentUrl), public_path('users/' . Auth::user()->email . '/' . $postContentUrl));
 
         //Remove file from temporaryPosts folder
-        File::delete(public_path('temporaryPosts/' . $postContentUrl));
+        Storage::delete('temporaryPosts/' . $postContentUrl);
+        //File::delete(public_path('temporaryPosts/' . $postContentUrl));
 
         return 'Postagem feita com sucesso';
     }

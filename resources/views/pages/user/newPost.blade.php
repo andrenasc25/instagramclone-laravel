@@ -5,7 +5,7 @@
         <div class="uploadPost">
             <div class="uploadPost-info-ctn">
                 <div class="uploadPost-image-preview-wrapper">
-                    <img src="{{asset('temporaryPosts/' . app('request')->input('imageName'))}}" class="uploadPost-image-preview">
+                    <img src="{{asset('storage/temporaryPosts/' . app('request')->input('imageName'))}}" class="uploadPost-image-preview">
                 </div>
                 <div class="uploadPost-description-wrapper">
                     <textarea name="" id="postDescription" cols="30" rows="10" placeholder="Escreva uma legenda..."></textarea>
@@ -27,7 +27,8 @@
             axios.post('/user/publish-post/', formData, {
 
             }).then((response) => {
-                window.location.href = "http://localhost:8000/profile"
+                //window.location.href = "http://localhost:8000/profile"
+                console.log(response.data)
             })
         })
     </script>
