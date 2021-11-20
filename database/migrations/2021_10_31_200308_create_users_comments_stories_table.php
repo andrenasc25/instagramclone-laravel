@@ -22,6 +22,8 @@ class CreateUsersCommentsStoriesTable extends Migration
             $table->unsignedBigInteger('user_story_id');
             $table->foreign('user_story_id')->references('id')->on('users_stories');
 
+            $table->longText('comment');
+
             $table->timestamp('created_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
