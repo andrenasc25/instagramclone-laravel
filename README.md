@@ -49,25 +49,25 @@ senha: 12345
 
 O Banco de dados relacional foi feito com restrições para ligar as chaves extrangeiras das tabelas quando necessário.
 
-![Eer Diagram](http://andrenascimento.com/external_images/instagram-clone/eer-diagram.png)
+![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
 
 ## Imagens do site
 
 ###### Página principal
 
-![alt text](http://andrenascimento.com/external_images/instagram-clone/home.png)
+![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
 
 ###### Página de configurações
 
-![alt text](http://andrenascimento.com/external_images/instagram-clone/config-page.png)
+![Config Page](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/config-page.png)
 
 ###### Página de perfil de usuário
 
-![alt text](http://andrenascimento.com/external_images/instagram-clone/profile.png)
+![Profile](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/profile.png)
 
 ###### Página de chat
 
-![alt text](http://andrenascimento.com/external_images/instagram-clone/chat.png)
+![Chat](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/chat.png)
 
 ## O que ainda precisa ser feito
 
