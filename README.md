@@ -1,3 +1,6 @@
+Selecionar Idioma: [Português](https://github.com/andre-rep/laravel-instagram-clone/blob/master/README-pt.md), **English**
+========
+
 ## About the project
 
 It is a clone of the instagram.com website made in laravel 8. It is still in progress but it already has several features of the real website.
