@@ -1,83 +1,83 @@
-## Sobre o Projeto
+## About the project
 
-É um clone do site instagram.com feito em laravel 8. Ainda está em andamento mas já conta com várias funcionalidades do site real.
+It is a clone of the instagram.com website made in laravel 8. It is still in progress but it already has several features of the real website.
 
-## Tecnologias utilizadas
+## Stack used
 
-Para o backend está sendo utilizado Laravel 8 e Mysql Workbench para gerenciamento do banco de dados. Para o front end está sendo usado Html, Css e Javascript puros além de algumas bibliotecas para funções específicas como Bootstrap 5, Vue.js e Axios para requisições Http.
+For the backend, Laravel 8 and Mysql Workbench are being used for database management. For the front end pure HTML, CSS and Javascript are being used, as well as some libraries for specific functions like Bootstrap 5, Vue.js and Axios for Http requests.
 
-## Como instalar
+## How to install
 
-Após a configuração do arquivo .env basta rodar o comando:
+After configuring the .env file, just run the command:
 ```
 php artisan migrate --seed
 ```
-O site já vai estar instalado e populado com alguns usuários.
-É necessário também fazer um link entre o storage a pasta storage dentro de public, usando o comando:
+The site will already be installed and populated with some users.
+It is also necessary to link the storage to the storage folder inside public, using the command:
 ```
 php artisan storage:link
 ```
 
-###### Opcional
+###### Optional
 
-Para fazer **cadastro de novo usuário** é necessário usar a biblioteca de envio de email do Laravel. Para isso é necessário configurar o arquivo .env com credenciais de um servidor smtp, o seguinte exemplo usa configurações para o gmail:
+To **register a new user** it is necessary to use Laravel's mailing library. For this it is necessary to configure the .env file with credentials from an SMTP server, the following example uses settings for gmail:
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
 MAIL_PORT=465
-MAIL_USERNAME=endereco@email.com
-MAIL_PASSWORD=senhadoemail
+MAIL_USERNAME=address@email.com
+MAIL_PASSWORD=emailpassword
 MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=null
 MAIL_FROM_NAME="${APP_NAME}"
 ```
-Você pode colocar em 'MAIL_USERNAME' e em 'MAIL_PASSWORD' as credenciais do seu próprio email, funciona normalmente. Mas por questão de segurança você também pode configurar uma senha de app na sua conta gmail e colocar em 'MAIL_PASSWORD', seguindo o [Tutotial](https://support.google.com/mail/answer/185833?hl=pt-BR), funciona da memsa maneira.
+You can put in 'MAIL_USERNAME' and in 'MAIL_PASSWORD' your own email credentials, it works normally. But for security reasons you can also set an app password on your gmail account and put it in 'MAIL_PASSWORD', following the [Tutotial](https://support.google.com/mail/answer/185833?hl=en) , works the same way.
 
-## Login como Usuário Comum
+## Login as Common User
 
-Usuários já cadastrados\
+Already registered users\
 login: user@user.com\
-senha: 12345\
+password: 12345\
 \
 login: another@user.com\
-senha: 12345\
+password: 12345\
 \
 login: third@user.com\
-senha: 12345
+password: 12345
 
-## Banco de dados
+## Database
 
-O Banco de dados relacional foi feito com restrições para ligar as chaves extrangeiras das tabelas quando necessário.
+The relational database was made with restrictions to link the foreign keys of the tables when necessary.
 
 ![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
 
-## Imagens do site
+## Images from the site
 
-###### Página principal
+###### Main page
 
 ![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
 
-###### Página de configurações
+###### Settings page
 
 ![Config Page](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/config-page.png)
 
-###### Página de perfil de usuário
+###### User profile page
 
 ![Profile](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/profile.png)
 
-###### Página de chat
+###### Chat page
 
 ![Chat](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/chat.png)
 
-## O que ainda precisa ser feito
+## What still needs to be done
 
-Ainda é necessário implementar diversas funcionalidades, dentre elas:
-- Comentar em uma postagem
-- Adicionar story
-- Dar 'likes' nas postagens
-- Implementar a página de 'explore'
-- Implementar o chat
-- Adicionar funcionalidade de salvar postagens
-- Adicionar as demais páginas da rota /config, atualmente está funcionando a atualização de informações pessoais
-- A pesquisa por usuários, hashtags e locais
-- As sugestões de novos usuários na página principal
+It is still necessary to implement several features, including:
+- Comment on a post
+- Add story
+- Give 'likes' to posts
+- Implement the 'explore' page
+- Implement the chat
+- Add post saving functionality
+- Add the other pages of the route /config, the update of personal information is currently working
+- Search by users, hashtags and locations
+- Suggestions from new users on the main page
