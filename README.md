@@ -53,7 +53,7 @@ senha: 12345\
 login: third@user.com\
 senha: 12345
 
-###### Opcional
+## Opcional
 
 Para **registrar um novo usuário** é necessário usar a biblioteca de email do Laravel. Para isso configure o seu arquivo .env com as credenciais do seu servidor SMTP. Um exemplo de configuração do servidor do gmail:
 ```
