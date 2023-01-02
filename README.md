@@ -1,5 +1,4 @@
 <h1 align="center">Instagram Clone</h1>
-## Descrição do Projeto
 <p align="center">Um projeto de clone do site instagram.com</p>
 
 <h4 align="center"> 
@@ -43,7 +42,7 @@ $ php artisan serve
 ```
 
 ## Fazer login na aplicação
-### Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
+Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
 
 login: user@user.com\
 senha: 12345\
