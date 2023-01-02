@@ -41,7 +41,7 @@ $ php artisan serve
 # O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
 
-## Fazer login na aplicação
+### Fazer login na aplicação
 Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
 
 login: user@user.com\
@@ -53,7 +53,7 @@ senha: 12345\
 login: third@user.com\
 senha: 12345
 
-## Opcional
+### Opcional
 
 Para **registrar um novo usuário** é necessário usar a biblioteca de email do Laravel. Para isso configure o seu arquivo .env com as credenciais do seu servidor SMTP. Um exemplo de configuração do servidor do gmail:
 ```
@@ -77,7 +77,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-## Imagens da aplicação
+### Imagens da aplicação
 ###### Página principal
 
 ![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
