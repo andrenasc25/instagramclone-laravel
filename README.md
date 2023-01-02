@@ -1,29 +1,62 @@
-Selecionar Idioma: [Português](https://github.com/andre-rep/laravel-instagram-clone/blob/master/README-pt.md), **English**
-========
+<h1 align="center">Instagram Clone</h1>
+## Descrição do Projeto
+<p align="center">Um projeto de clone do site instagram.com</p>
 
-## About the project
+<h4 align="center"> 
+	🚧  Laravel 🚀 Em construção...  🚧
+</h4>
 
-It is a clone of the instagram.com website made in laravel 8. It is still in progress but it already has several features of the real website.
+### Pré-requisitos
 
-## Stack used
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Laravel](https://laravel.com/) na versão 8, [Mysql Workbench](https://www.mysql.com/products/workbench/), [PHP](https://www.php.net/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-For the backend, Laravel 8 and Mysql Workbench are being used for database management. For the front end pure HTML, CSS and Javascript are being used, as well as some libraries for specific functions like Bootstrap 5, Vue.js and Axios for Http requests.
+### 🎲 Rodando o Back End (servidor)
 
-## How to install
+```bash
+# Clone este repositório
+$ git clone <https://github.com/andre-rep/instagramclone-laravel>
 
-After configuring the .env file, just run the command:
+# Acesse a pasta do projeto no terminal/cmd
+$ cd instagramclone-laravel
+
+# Instale as dependências
+$ composer install
+
+# Abra o arquivo .env para editar as credenciais de acesso ao seu servidor workbench
+$ nano .env
+
+# Renomeie o arquivo .env.example para .env
+$ mv .env.example .env
+
+# Envie os dados da aplicação para o workbench
+$ php artisan migrate --seed
+
+# Crie um link da pasta storage para uma pasta dentro da pasta public
+$ php artisan storage:link
+
+# Inicie o servidor
+$ php artisan serve
+
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
-php artisan migrate --seed
-```
-The site will already be installed and populated with some users.
-It is also necessary to link the storage to the storage folder inside public, using the command:
-```
-php artisan storage:link
-```
 
-###### Optional
+## Fazer login na aplicação
+### Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
 
-To **register a new user** it is necessary to use Laravel's mailing library. For this it is necessary to configure the .env file with credentials from an SMTP server, the following example uses settings for gmail:
+login: user@user.com\
+senha: 12345\
+\
+login: another@user.com\
+senha: 12345\
+\
+login: third@user.com\
+senha: 12345
+
+###### Opcional
+
+Para **registrar um novo usuário** é necessário usar a biblioteca de email do Laravel. Para isso configure o seu arquivo .env com as credenciais do seu servidor SMTP. Um exemplo de configuração do servidor do gmail:
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
@@ -34,53 +67,45 @@ MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=null
 MAIL_FROM_NAME="${APP_NAME}"
 ```
-You can put in 'MAIL_USERNAME' and in 'MAIL_PASSWORD' your own email credentials, it works normally. But for security reasons you can also set an app password on your gmail account and put it in 'MAIL_PASSWORD', following the [Tutotial](https://support.google.com/mail/answer/185833?hl=en) , works the same way.
+Substitua 'MAIL_USERNAME' pelo seu username do gmail e 'MAIL_PASSWORD' pela a sua senha do gmail. Caso não queira usar sua senha do gmail, você pode criar uma senha alternativa apenas para essa aplicação, siga o tutorial para isso: [Tutotial](https://support.google.com/mail/answer/185833?hl=pt-br).
 
-## Login as Common User
+### 🛠 Tecnologias
 
-Already registered users\
-login: user@user.com\
-password: 12345\
-\
-login: another@user.com\
-password: 12345\
-\
-login: third@user.com\
-password: 12345
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Database
+- [Laravel](https://laravel.com/)
+- [Mysql Workbench](https://www.mysql.com/products/workbench/)
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-The relational database was made with restrictions to link the foreign keys of the tables when necessary.
-
-![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
-
-## Images from the site
-
-###### Main page
+## Imagens da aplicação
+###### Página principal
 
 ![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
 
-###### Settings page
+###### Página de configuração
 
 ![Config Page](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/config-page.png)
 
-###### User profile page
+###### Página de perfil do usuário
 
 ![Profile](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/profile.png)
 
-###### Chat page
+###### Página de chat
 
 ![Chat](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/chat.png)
 
-## What still needs to be done
+###### Banco de dados relacional
 
-It is still necessary to implement several features, including:
-- Comment on a post
-- Add story
-- Give 'likes' to posts
-- Implement the 'explore' page
-- Implement the chat
-- Add post saving functionality
-- Add the other pages of the route /config, the update of personal information is currently working
-- Search by users, hashtags and locations
-- Suggestions from new users on the main page
+![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
+
+### Autor
+---
+
+<a href="https://github.com/andre-rep">
+ <img style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/36203075?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>André Nascimento</b></sub></a> <a href="https://github.com/andre-rep" title="Github">🚀</a>
+
+
+Feito com ❤️ por André Nascimento
