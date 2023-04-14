@@ -1,44 +1,52 @@
-Select Language: [English](https://github.com/andre-rep/laravel-instagram-clone), **Português**
+Selecione o idioma: [Inglês](https://github.com/andrenasc25/instagramclone-laravel), **Português**
 ========
 
-## Sobre o Projeto
+<h1 align="center">Instagram Clone</h1>
+<p align="center">Um projeto de clone do site instagram.com</p>
 
-É um clone do site instagram.com feito em laravel 8. Ainda está em andamento mas já conta com várias funcionalidades do site real.
+<h4 align="center"> 
+	🚀 Em construção...  🚧
+</h4>
 
-## Tecnologias utilizadas
+### Pré-requisitos
 
-Para o backend está sendo utilizado Laravel 8 e Mysql Workbench para gerenciamento do banco de dados. Para o front end está sendo usado Html, Css e Javascript puros além de algumas bibliotecas para funções específicas como Bootstrap 5, Vue.js e Axios para requisições Http.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Laravel](https://laravel.com/) na versão 8, [Mysql Workbench](https://www.mysql.com/products/workbench/), [PHP](https://www.php.net/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-## Como instalar
+### 🎲 Rodando o Back End (servidor)
 
-Após a configuração do arquivo .env basta rodar o comando:
+```bash
+# Clone este repositório
+$ git clone <https://github.com/andre-rep/instagramclone-laravel>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd instagramclone-laravel
+
+# Instale as dependências
+$ composer install
+
+# Abra o arquivo .env para editar as credenciais de acesso ao seu servidor workbench
+$ nano .env
+
+# Renomeie o arquivo .env.example para .env
+$ mv .env.example .env
+
+# Envie os dados da aplicação para o workbench
+$ php artisan migrate --seed
+
+# Crie um link da pasta storage para uma pasta dentro da pasta public
+$ php artisan storage:link
+
+# Inicie o servidor
+$ php artisan serve
+
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
-php artisan migrate --seed
-```
-O site já vai estar instalado e populado com alguns usuários.
-É necessário também fazer um link entre o storage a pasta storage dentro de public, usando o comando:
-```
-php artisan storage:link
-```
 
-###### Opcional
+### Fazer login na aplicação
+Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
 
-Para fazer **cadastro de novo usuário** é necessário usar a biblioteca de envio de email do Laravel. Para isso é necessário configurar o arquivo .env com credenciais de um servidor smtp, o seguinte exemplo usa configurações para o gmail:
-```
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.googlemail.com
-MAIL_PORT=465
-MAIL_USERNAME=endereco@email.com
-MAIL_PASSWORD=senhadoemail
-MAIL_ENCRYPTION=ssl
-MAIL_FROM_ADDRESS=null
-MAIL_FROM_NAME="${APP_NAME}"
-```
-Você pode colocar em 'MAIL_USERNAME' e em 'MAIL_PASSWORD' as credenciais do seu próprio email, funciona normalmente. Mas por questão de segurança você também pode configurar uma senha de app na sua conta gmail e colocar em 'MAIL_PASSWORD', seguindo o [Tutotial](https://support.google.com/mail/answer/185833?hl=pt-BR), funciona da memsa maneira.
-
-## Login como Usuário Comum
-
-Usuários já cadastrados\
 login: user@user.com\
 senha: 12345\
 \
@@ -48,23 +56,40 @@ senha: 12345\
 login: third@user.com\
 senha: 12345
 
-## Banco de dados
+### Opcional
 
-O Banco de dados relacional foi feito com restrições para ligar as chaves extrangeiras das tabelas quando necessário.
+Para **registrar um novo usuário** é necessário usar a biblioteca de email do Laravel. Para isso configure o seu arquivo .env com as credenciais do seu servidor SMTP. Um exemplo de configuração do servidor do gmail:
+```
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=address@email.com
+MAIL_PASSWORD=emailpassword
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
+```
+Substitua 'MAIL_USERNAME' pelo seu username do gmail e 'MAIL_PASSWORD' pela a sua senha do gmail. Caso não queira usar sua senha do gmail, você pode criar uma senha alternativa apenas para essa aplicação, siga o tutorial para isso: [Tutotial](https://support.google.com/mail/answer/185833?hl=pt-br).
 
-![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
+### 🛠 Tecnologias
 
-## Imagens do site
+As seguintes ferramentas foram usadas na construção do projeto:
 
+- [Laravel](https://laravel.com/)
+- [Mysql Workbench](https://www.mysql.com/products/workbench/)
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
+### Imagens da aplicação
 ###### Página principal
 
 ![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
 
-###### Página de configurações
+###### Página de configuração
 
 ![Config Page](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/config-page.png)
 
-###### Página de perfil de usuário
+###### Página de perfil do usuário
 
 ![Profile](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/profile.png)
 
@@ -72,15 +97,17 @@ O Banco de dados relacional foi feito com restrições para ligar as chaves extr
 
 ![Chat](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/chat.png)
 
-## O que ainda precisa ser feito
+###### Banco de dados relacional
 
-Ainda é necessário implementar diversas funcionalidades, dentre elas:
-- Comentar em uma postagem
-- Adicionar story
-- Dar 'likes' nas postagens
-- Implementar a página de 'explore'
-- Implementar o chat
-- Adicionar funcionalidade de salvar postagens
-- Adicionar as demais páginas da rota /config, atualmente está funcionando a atualização de informações pessoais
-- A pesquisa por usuários, hashtags e locais
-- As sugestões de novos usuários na página principal
+![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
+
+### Autor
+---
+
+<a href="https://github.com/andre-rep">
+ <img style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/36203075?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>André Nascimento</b></sub></a> <a href="https://github.com/andre-rep" title="Github">🚀</a>
+
+
+Feito com ❤️ por André Nascimento

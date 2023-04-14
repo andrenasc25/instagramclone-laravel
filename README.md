@@ -1,61 +1,64 @@
+Select Language: [Portuguese](https://github.com/andrenasc25/instagramclone-laravel/blob/master/README-pt.md), **English**
+========
+
 <h1 align="center">Instagram Clone</h1>
-<p align="center">Um projeto de clone do site instagram.com</p>
+<p align="center">A clone project of the instagram.com website</p>
 
 <h4 align="center"> 
-	🚧  Laravel 🚀 Em construção...  🚧
+	🚀 Under construction...  🚧
 </h4>
 
-### Pré-requisitos
+### Prerequisites
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Laravel](https://laravel.com/) na versão 8, [Mysql Workbench](https://www.mysql.com/products/workbench/), [PHP](https://www.php.net/).
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Before starting, you will need to have the following tools installed on your machine:
+[Laravel](https://laravel.com/) in version 8, [Mysql Workbench](https://www.mysql.com/products/workbench/), [PHP](https://www.php.net/).
+Also it's nice to have an editor to work with the code like [VSCode](https://code.visualstudio.com/)
 
-### 🎲 Rodando o Back End (servidor)
+### 🎲 Running the Back End (server)
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone <https://github.com/andre-rep/instagramclone-laravel>
 
-# Acesse a pasta do projeto no terminal/cmd
+# Access project folder in terminal/cmd
 $ cd instagramclone-laravel
 
-# Instale as dependências
+# Install the dependencies
 $ composer install
 
-# Abra o arquivo .env para editar as credenciais de acesso ao seu servidor workbench
+# Open the .env file to edit your workbench server access credentials
 $ nano .env
 
-# Renomeie o arquivo .env.example para .env
+# Rename the .env.example file to .env
 $ mv .env.example .env
 
-# Envie os dados da aplicação para o workbench
+# Send application data to the workbench
 $ php artisan migrate --seed
 
-# Crie um link da pasta storage para uma pasta dentro da pasta public
+# Create a link from the storage folder to a folder inside the public folder
 $ php artisan storage:link
 
-# Inicie o servidor
+# Start the server
 $ php artisan serve
 
-# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
+# The server will start on port:8000 - access <http://localhost:8000>
 ```
 
-### Fazer login na aplicação
-Três contas já estão criadas na aplicação, você pode interagir umas com as outras. Seguir, fazer comentários, curtir e outras funções do site instagram.com
+### Login to the application
+Three accounts are already created in the application, you can interact with each other. Following, commenting, liking and other functions on the instagram.com website
 
 login: user@user.com\
-senha: 12345\
+password: 12345\
 \
 login: another@user.com\
-senha: 12345\
+password: 12345\
 \
 login: third@user.com\
-senha: 12345
+password: 12345
 
-### Opcional
+### Optional
 
-Para **registrar um novo usuário** é necessário usar a biblioteca de email do Laravel. Para isso configure o seu arquivo .env com as credenciais do seu servidor SMTP. Um exemplo de configuração do servidor do gmail:
+To **register a new user** you need to use Laravel's email library. To do so, configure your .env file with your SMTP server credentials. An example gmail server configuration:
 ```
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.googlemail.com
@@ -66,45 +69,34 @@ MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=null
 MAIL_FROM_NAME="${APP_NAME}"
 ```
-Substitua 'MAIL_USERNAME' pelo seu username do gmail e 'MAIL_PASSWORD' pela a sua senha do gmail. Caso não queira usar sua senha do gmail, você pode criar uma senha alternativa apenas para essa aplicação, siga o tutorial para isso: [Tutotial](https://support.google.com/mail/answer/185833?hl=pt-br).
+Replace 'MAIL_USERNAME' with your gmail username and 'MAIL_PASSWORD' with your gmail password. If you don't want to use your gmail password, you can create an alternative password just for that application, follow the tutorial for that: [Tutorial](https://support.google.com/mail/answer/185833?hl).
 
-### 🛠 Tecnologias
+### 🛠 Technologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following tools were used in building the project:
 
 - [Laravel](https://laravel.com/)
 - [Mysql Workbench](https://www.mysql.com/products/workbench/)
 - [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-### Imagens da aplicação
-###### Página principal
+### Application screenshots
+###### Main page
 
 ![Home](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/home.png)
 
-###### Página de configuração
+###### Configuration page
 
 ![Config Page](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/config-page.png)
 
-###### Página de perfil do usuário
+###### User profile page
 
 ![Profile](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/profile.png)
 
-###### Página de chat
+###### Chat page
 
 ![Chat](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/chat.png)
 
-###### Banco de dados relacional
+###### Relational database
 
 ![Eer Diagram](https://raw.githubusercontent.com/andre-rep/laravel-instagram-clone/master/public/andre-rep/eer-diagram.png)
-
-### Autor
----
-
-<a href="https://github.com/andre-rep">
- <img style="border-radius:50px;" src="https://avatars.githubusercontent.com/u/36203075?v=4" width="100px;" alt=""/>
- <br />
- <sub><b>André Nascimento</b></sub></a> <a href="https://github.com/andre-rep" title="Github">🚀</a>
-
-
-Feito com ❤️ por André Nascimento
